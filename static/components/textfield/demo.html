@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/styles/app.css">
+  <script type="module" src="textfield.js"></script>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <div class="form-row">
+        <app-textfield
+          class="conta-descricao"
+          autofocus="true"
+          type="text"
+          label="Descrição:"
+          width="w-75"
+          value=""
+          placeholder="descrição..."
+          invalid="false"
+          message="A descrição da conta é obrigatória">
+          <img src="/static/images/credit-card.svg" name="icon" />
+        </app-textfield>
+      </div>
+
+
+      <button>teste</button>
+    </form>
+
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded',function () {
+      document.querySelector('button').addEventListener('click',function(e){
+        e.preventDefault();
+        var input = document.querySelector(".conta-descricao");
+        console.log(input, input.getAttribute('value'), input.val);
+      });
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3 class="mb-3">Contas</h3>
+<form>
+  <app-contaview
+    id="{{id}}"
+    descricao="{{descricao}}"
+    valor="{{valor}}"
+  ></app-contaview>
+</form>
+{% endblock %}

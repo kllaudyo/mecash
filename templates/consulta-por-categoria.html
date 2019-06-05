@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3 class="mb-3">Consolta por Categorias</h3>
+<div class="card">
+  <div class="card-header text-right">
+    <input type="search" placeholder="Filtrar por categoria..." class="form-control form-control-sm d-inline-block" style="width: 200px;" />
+    <select class="form-control form-control-sm d-inline-block" style="width: 110px;">
+      <option>Janeiro</option>
+      <option>Fevereiro</option>
+      <option>Março</option>
+      <option>Abril</option>
+      <option>Maio</option>
+      <option>Junho</option>
+      <option>Julho</option>
+      <option>Agosto</option>
+      <option>Setembro</option>
+      <option>Outubro</option>
+      <option>Novembro</option>
+      <option>Dezembro</option>
+    </select>
+    <select class="form-control form-control-sm d-inline-block" style="width: 80px;">
+      <option>2019</option>
+    </select>
+  </div>
+  <div class="card-body">
+    <app-consulta-categoria></app-consulta-categoria>
+  </div>
+</div>
+{% endblock %}

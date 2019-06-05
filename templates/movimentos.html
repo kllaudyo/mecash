@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3 class="mb-3">
+    Movimentos
+    <select style="width: 100px;" class="form-control d-inline-block float-right">
+        <option>2019</option>
+    </select>
+</h3>
+
+
+<app-movimentosview year='{{year}}' month='{{month}}'>
+</app-movimentosview>
+{% endblock %}
+{% block script %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3 class="mb-3">Categorias</h3>
+<form>
+  <app-categoriaview
+    id="{{id}}"
+    descricao="{{descricao}}"
+    tipo="{{tipo}}"
+  ></app-categoriaview>
+</form>
+{% endblock %}

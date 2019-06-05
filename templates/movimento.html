@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3 class="mb-3">Movimentos</h3>
+<form>
+  <app-movimentoview
+    id="{{id}}"
+    conta="{{conta}}"
+    categoria="{{categoria}}"
+    historico="{{historico}}"
+    previsao="{{previsao}}"
+    confirmacao="{{confirmacao}}"
+    valor="{{valor}}"
+  >
+  </app-movimentoview>
+</form>
+{% endblock %}
