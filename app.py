@@ -123,7 +123,6 @@ def movimento(id=0):
 @app.route('/contas')
 @app.route('/contas/')
 def contas():
-    print(request.accept_mimetypes)
     if re.search('application/json', str(request.accept_mimetypes)) \
             and not re.search('text/html', str(request.accept_mimetypes)) \
             and not len(str(request.accept_mimetypes)) == 0 :
@@ -135,6 +134,18 @@ def contas():
 
     else:
         return render_template('contas.html')
+
+
+@app.route('/cartoes')
+@app.route('/cartoes/')
+def cartoes():
+    if re.search('application/json', str(request.accept_mimetypes)) \
+            and not re.search('text/html', str(request.accept_mimetypes)) \
+            and not len(str(request.accept_mimetypes)) == 0 :
+        results = []
+        return jsonify(results)
+    else:
+        return render_template('cartoes.html')
 
 
 @app.route('/conta/', methods=['GET','POST'])
